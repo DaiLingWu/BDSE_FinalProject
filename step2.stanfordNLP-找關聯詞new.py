@@ -4,7 +4,7 @@ import json
 import pandas as pd
 import re
 
-tip_df=pd.read_csv('/Users/wudailing/review_2013_new.csv', encoding="ISO-8859-1")
+tip_df=pd.read_json('/Users/wudailing/Desktop/期末報告/tip.json',lines=True)
 tip_df_text=tip_df['text']
 tip_df_businessid=tip_df['business_id']
 
@@ -26,7 +26,7 @@ def dependency_parse_list_new_making(d_p_l,dplnew):
 
 
 business_id_withlist={}
-for i in range(1,50):
+for i in range(1,3):
     sentence = tip_df_text[i]
     business_id=tip_df_businessid[i]
     split_sentence_list=re.split('!|\?|\.',sentence)
@@ -50,7 +50,7 @@ print(business_id_withlist)
 
 for key,value in business_id_withlist.items():
     for i in range(len(value)):
-        if value[i][1]=='couple' or value[i][2]=='couple':
+        if value[i][1]=='location' or value[i][2]=='location':
             print(key,value[i])
 
 
