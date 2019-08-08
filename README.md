@@ -4,4 +4,4 @@
 3. PPT介紹連結：https://drive.google.com/file/d/1mIBsz7coEoz2y22H-Pgn0GXEuTEZwczg/view?usp=sharing3
 # 其他專案 - kaggle競賽
 1. Bike Sharing Demand
-2. Black Friday Prediction
+2. Black Friday Analysis
